@@ -12,12 +12,10 @@ pipeline:
     commands:
     - npm run test
 
-
-  slack-notification:
+  - name: slack
     image: plugins/slack
-    webhook: https://hooks.slack.com/services/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
-    username: dronereact
-    icon_emoji: ":rocket:"
+    settings:
+      webhook: https://hooks.slack.com/services/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
+      channel: drone-kevincardon
     when:
-      event: [ push, tag, deployment, pull_request ]
       status: [ success, failure ]
