@@ -1,14 +1,16 @@
 pipeline:
+  kind: pipeline
+  name: react-ci-cd
 
   steps:
   - name: build
-    image: node:9.0.0
+    image: node:8.16.1-alpine
     commands:
     - npm install
     - npm build
 
   - name: test
-    image: node:9.0.0
+    image: node:8.16.1-alpine
     commands:
     - npm run test
 
