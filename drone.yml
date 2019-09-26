@@ -19,3 +19,7 @@ pipeline:
       channel: drone-kevincardon
     when:
       status: [ success, failure ]
+
+  trigger:
+    branch:
+    - master
