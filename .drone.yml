@@ -19,13 +19,6 @@
     commands:
     - npm pack
 
-  - name: release
-    image: plugins/github-release
-    settings:
-      api_key:
-        from_secret: github_token
-      files: spa-0.1.0.tgz
-
   - name: slack
     image: plugins/slack
     settings:
