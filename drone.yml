@@ -1,6 +1,6 @@
 pipeline:
   kind: pipeline
-  name: react-ci-cd
+  name: dronereact
 
   steps:
   - name: build
