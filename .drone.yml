@@ -17,14 +17,14 @@
   - name: prerelease
     image: node:8.16.1-alpine
     commands:
-    - tar -zcvf build.tar.gz build
+    - npm pack
 
   - name: release
     image: plugins/github-release
     settings:
       api_key:
         from_secret: dronekey
-      files: build.tar.gz
+      files: spa-0.1.0.tgz
     when:
       event: tag
 
